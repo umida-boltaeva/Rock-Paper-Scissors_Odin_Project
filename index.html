@@ -18,6 +18,29 @@
       return "Draw!";
     } else if (playerSelection === "Rock" && computerSelection === "Paper") {
       return "Oops! You lost! Paper wraps rock!";
+
+      //version 2.
+    } else if (
+      playerSelection === "Paper" &&
+      computerSelection === "Scissors"
+    ) {
+      return "Oops! You lost! Scissors beats paper!";
+    } else if (playerSelection === "Paper" && computerSelection === "Paper") {
+      return "Draw!";
+    } else if (playerSelection === "Paper" && computerSelection === "Rock") {
+      return "You won! Paper beats rock!";
+    }
+
+    //version 3.
+    else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+      return "Yay! You won! Scissors beats paper!";
+    } else if (
+      playerSelection === "Scissors" &&
+      computerSelection === "Scissors"
+    ) {
+      return "Draw!";
+    } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+      return "Oops! You lost! Rock beats scissors!";
     }
   }
 
