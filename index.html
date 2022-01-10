@@ -1,0 +1,41 @@
+<script>
+  //Get random item among rock, paper and scissors.
+
+  function computerPlay() {
+    const items = ["Rock", "Paper", "Scissors"];
+    let item = items[Math.floor(Math.random() * items.length)];
+    return item;
+  }
+  //   console.log(computerPlay());
+  ////////////////////////////////////////////////////////////////////////////////
+
+  //Play a single round of Rock, Paper and Scissors.
+
+  function playRound(playerSelection, computerSelection) {
+    if (playerSelection === "Rock" && computerSelection === "Scissors") {
+      return "You won! Rock beats scissors!";
+    } else if (playerSelection === "Rock" && computerSelection === "Rock") {
+      return "Draw!";
+    } else if (playerSelection === "Rock" && computerSelection === "Paper") {
+      return "Oops! You lost! Paper wraps rock!";
+    }
+  }
+
+  const playerSelection = prompt("What do you choose?");
+  const computerSelection = computerPlay();
+
+  console.log(playRound(playerSelection, computerSelection));
+
+  ////////////////////////////////////////////////////////////////////////
+
+  //   function game() {
+  //     let playerScore = 0;
+  //     let computerScore = 0;
+  //     if (playerSelection === "Paper" && computerSelection === "Rock") {
+  //       return "You won! Paper beats Rock!";
+  //       playerScore = 1;
+  //       computerScore = 0;
+  //     }
+  //   }
+  //   console.log(game);
+</script>
